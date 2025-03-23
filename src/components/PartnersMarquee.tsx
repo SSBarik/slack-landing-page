@@ -2,7 +2,7 @@ import { partnerLogos } from "../configs/partners";
 
 const PartnersMarquee: React.FC = () => {
   return (
-    <section className="py-12 border-t border-b border-gray-200 overflow-hidden">
+    <section className="py-12 overflow-hidden">
       <div className="relative flex w-full">
         {/* Marquee Container */}
         <div className="flex items-center gap-8 md:gap-12 animate-marquee">
