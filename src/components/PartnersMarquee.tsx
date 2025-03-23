@@ -2,15 +2,19 @@ import { partnerLogos } from "../configs/partners";
 
 const PartnersMarquee: React.FC = () => {
   return (
-    <section className="py-12 border-t border-b border-gray-200">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-          {partnerLogos.map((logo) => (
-            <div key={logo.name} className="flex items-center justify-center">
+    <section className="py-12 border-t border-b border-gray-200 overflow-hidden">
+      <div className="relative flex w-full">
+        {/* Marquee Container */}
+        <div className="flex items-center gap-8 md:gap-12 animate-marquee">
+          {[...partnerLogos, ...partnerLogos].map((logo, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center min-w-[120px] md:min-w-[160px]"
+            >
               <img
-                src={logo.src || "/placeholder.svg"}
+                src={logo.src}
                 alt={logo.name}
-                className="h-8 md:h-10 w-auto grayscale opacity-70"
+                className="h-10 md:h-12 object-contain"
               />
             </div>
           ))}

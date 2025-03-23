@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             >
               Sign in
             </a>
-            <Button variant="outline" href="/sales">
+            <Button variant="bordered" href="/sales">
               TALK TO SALES
             </Button>
             <Button variant="primary" href="/signup">
